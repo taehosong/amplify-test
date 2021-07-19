@@ -1,0 +1,42 @@
+{
+  "paths": [
+    {
+      "name": "/items",
+      "lambdaFunction": "cmsTestApi",
+      "privacy": {
+        "private": true,
+        "auth": [
+          "/POST",
+          "/GET",
+          "/PUT",
+          "/PATCH",
+          "/DELETE"
+        ]
+      },
+      "policyResourceName": "/items"
+    }
+  ],
+  "resourceName": "cmsApi",
+  "apiName": "cmsApi",
+  "functionArns": [
+    {
+      "lambdaFunction": "cmsTestApi"
+    }
+  ],
+  "privacy": {
+    "auth": 1,
+    "unauth": 0,
+    "authRoleName": "amplify-cmstest-dev-180137-authRole",
+    "unAuthRoleName": "amplify-cmstest-dev-180137-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "cmsTestApi",
+      "attributes": [
+        "Name",
+        "Arn"
+      ]
+    }
+  ]
+}

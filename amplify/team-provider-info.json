@@ -10,6 +10,17 @@
       "StackName": "amplify-cmstest-dev-180137",
       "StackId": "arn:aws:cloudformation:ap-northeast-2:427007267116:stack/amplify-cmstest-dev-180137/44fcfaf0-e54b-11eb-8d8f-0a230a9b73fc",
       "AmplifyAppId": "dkhtedx3nznez"
+    },
+    "categories": {
+      "auth": {
+        "cognito1682c36b": {}
+      },
+      "function": {
+        "cmsTestApi": {
+          "deploymentBucketName": "amplify-cmstest-dev-180137-deployment",
+          "s3Key": "amplify-builds/cmsTestApi-2f4c4967336b494f6965-build.zip"
+        }
+      }
     }
   }
 }

@@ -1,11 +1,10 @@
 /* src/App.js */
 import React, { useEffect, useState } from 'react';
-import Amplify, { API, graphqlOperation } from 'aws-amplify';
+import { API, graphqlOperation } from 'aws-amplify';
 import { createTodo } from './graphql/mutations';
 import { listTodos } from './graphql/queries';
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
-import awsExports from './aws-exports';
-Amplify.configure(awsExports);
 
 const initialState = { name: '', description: '' };
 
@@ -23,6 +22,8 @@ const App = () => {
 
   async function fetchTodos() {
     try {
+      API.get('cmsApi', '/items').then(console.log).catch(console.log);
+      
       const todoData = await API.graphql(graphqlOperation(listTodos));
       const todos = todoData.data.listTodos.items;
       setTodos(todos);
@@ -99,4 +100,4 @@ const styles = {
   },
 };
 
-export default App;
+export default withAuthenticator(App);
