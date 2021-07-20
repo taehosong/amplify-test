@@ -22,5 +22,29 @@
         }
       }
     }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-cmstest-test-190650-authRole",
+      "UnauthRoleArn": "arn:aws:iam::427007267116:role/amplify-cmstest-test-190650-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::427007267116:role/amplify-cmstest-test-190650-authRole",
+      "Region": "ap-northeast-2",
+      "DeploymentBucketName": "amplify-cmstest-test-190650-deployment",
+      "UnauthRoleName": "amplify-cmstest-test-190650-unauthRole",
+      "StackName": "amplify-cmstest-test-190650",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:427007267116:stack/amplify-cmstest-test-190650/09adbd00-e879-11eb-9e57-027ae4e746ea",
+      "AmplifyAppId": "dkhtedx3nznez"
+    },
+    "categories": {
+      "auth": {
+        "cognito1682c36b": {}
+      },
+      "function": {
+        "cmsTestApi": {
+          "deploymentBucketName": "amplify-cmstest-test-190650-deployment",
+          "s3Key": "amplify-builds/cmsTestApi-2f4c4967336b494f6965-build.zip"
+        }
+      }
+    }
   }
 }
